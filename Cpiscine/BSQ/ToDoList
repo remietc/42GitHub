@@ -1,0 +1,48 @@
+//////////DATA GATHERING////////////
+
+// Get arguments from argv : argc must be >= 2
+
+// ???? If no argument is given, then our program must be able to read on the std input ???
+
+// Get the file(s) containing the board
+
+// Open each file and get the length/size that we need to malloc
+
+// Allocate memory to stock each board inside an array
+
+
+
+//////////FILL EACH ARRAY WITH ONE BOARD////////////
+
+// Get the first line containing infos about the MAP:
+		// -number of lines.
+		// -"empty" character.
+		// -"obstacle" character.
+		// -"filled" character.
+
+// Separate each line of the MAP and stock it inside the array.
+
+//////////MAP CHECK//////////
+
+//Check for MAP HEADER integrity
+		// Map header must contain description of : empty, filled and obstacle characters.
+		// Each char (empty, filled, obstacle) must be different from each other.
+		// Chars may be anyone of the printable chars.
+
+//Check for map integrity
+		// At least one line of a least one char.
+		// Every lines must have the same length.
+		// No other char than those presented inside the map header should be found inside the map.
+		// There must be \n at the end of every line.
+
+
+
+//////////RESOLVE EACH BOARD//////////
+
+// Find the bsq FOR EACH MAP (the highest inside the board and nearest from the left side).
+
+//////////SHOW SOLUTION or THROW ERROR//////////
+
+// Every solution or map error must be followed by a newline.
+// MAP ERRORS must be thrown on the ERROR OUTPUT.
+
