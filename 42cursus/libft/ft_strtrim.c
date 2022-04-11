@@ -6,7 +6,7 @@
 /*   By: retcheba <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 11:42:26 by retcheba          #+#    #+#             */
-/*   Updated: 2022/04/10 11:59:00 by retcheba         ###   ########.fr       */
+/*   Updated: 2022/04/10 13:10:47 by retcheba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	find_start(char const *s1, char const *set)
 		if (s1[i] == set[j])
 		{
 			i++;
-			j = 0;
+			j = -1;
 		}
 		j++;
 	}
@@ -37,15 +37,15 @@ static size_t	find_end(char const *s1, char const *set)
 	size_t	j;
 
 	i = ft_strlen(s1);
-	j = ft_strlen(set);
-	while (j > 0)
+	j = 0;
+	while (set[j])
 	{
-		j--;
 		if (s1[i] == set[j])
 		{
 			i--;
-			j = ft_strlen(set);
+			j = -1;
 		}
+		j++;
 	}
 	return (i);
 }
